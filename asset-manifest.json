@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/food_delivery/static/css/main.7acaea2f.css",
-    "main.js": "/food_delivery/static/js/main.07d3183d.js",
+    "main.css": "/food_delivery/static/css/main.dace8c27.css",
+    "main.js": "/food_delivery/static/js/main.ec362df2.js",
+    "static/media/pngwing.com.png": "/food_delivery/static/media/pngwing.com.d7bc68182983741aa752.png",
     "index.html": "/food_delivery/index.html",
-    "main.7acaea2f.css.map": "/food_delivery/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/food_delivery/static/js/main.07d3183d.js.map"
+    "main.dace8c27.css.map": "/food_delivery/static/css/main.dace8c27.css.map",
+    "main.ec362df2.js.map": "/food_delivery/static/js/main.ec362df2.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.dace8c27.css",
+    "static/js/main.ec362df2.js"
   ]
 }
