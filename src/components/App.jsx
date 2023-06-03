@@ -16,12 +16,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectedToken } from "redux/auth/selectors";
 import { refresh } from "redux/auth/operations";
 import Home from "pages/Home/Home";
+import History from "pages/History/History";
+import { PrivateRoute } from "./PrivateRoute";
 
 
 const App = () => {
   const dispatch = useDispatch()
   const token = useSelector(selectedToken)
-
+console.log(token)
   useEffect(() => {
     if (token) {
       dispatch(refresh());
@@ -37,6 +39,7 @@ const App = () => {
         <Route path="/shop/" element={<RestrictedRoute component={Shop} redirectTo="/shop"/>} />
         <Route path="/shop/:shopId" element={<RestrictedRoute component={Shop} redirectTo="/shop"/>} />
         <Route path="/shoping" element={<RestrictedRoute component={Shoping} redirectTo="/shoping"/>} />
+        <Route path="/history" element={<PrivateRoute component={History} redirectTo="/history"/>} />
         <Route path="/register" element={<RestrictedRoute component={RegisterForm} redirectTo="/shop"/>} />
         <Route path="/login" element={<RestrictedRoute component={LoginForm} redirectTo="/shop"/>} />
       </Routes> 

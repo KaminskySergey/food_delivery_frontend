@@ -24,8 +24,8 @@ const authSlice = createSlice({
     ///======================================================
     .addCase(login.pending, state => state)
     .addCase(login.fulfilled, (state, {payload}) => {
-
-        // state.user = payload.user
+// console.log(payload, 'eeeeeeeeeeee')
+        // state.user = payload.data.user
         state.token = payload.data.token;
         state.isLoadingUser = true;
     })
@@ -41,12 +41,11 @@ const authSlice = createSlice({
         state.isRefreshingUser = true;
     })
     .addCase(refresh.fulfilled, (state, {payload}) => {
-        // state.user.name = payload.name
-        // state.user.email = payload.email
-        state.user = {name: payload.name, email: payload.email}
+        console.log(payload, 'qqqqqqqqqqqqqqqqqqqqqqqq')
+        state.user = payload.data.user
         state.isRefreshingUser = false;
         state.isLoadingUser = true;
-        // state.token = payload.token;
+        state.token = payload.data.token;
         
         
     })
